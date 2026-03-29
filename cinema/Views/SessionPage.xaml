@@ -1,0 +1,33 @@
+﻿<Page x:Class="cinema.Views.SessionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:cinema.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Выбор места">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Content="← Назад" Width="80" Height="30" HorizontalAlignment="Left" Click="BackButton_Click"/>
+
+        <StackPanel Grid.Row="1" Margin="0,10,0,20">
+            <TextBlock x:Name="InfoText" FontSize="16" FontWeight="Bold"/>
+            <TextBlock x:Name="HallInfoText" Margin="0,5,0,0"/>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <WrapPanel x:Name="SeatsPanel" Orientation="Horizontal" MaxWidth="600"/>
+        </ScrollViewer>
+
+        <Button Grid.Row="3" x:Name="ClearButton" Content="Убрать все занятые места" Width="200" Height="30" Margin="0,10" Click="ClearButton_Click"/>
+        <Button Grid.Row="4" x:Name="BookButton" Content="Оформить билет" Width="150" Height="30" Margin="0,10" IsEnabled="False" Click="BookButton_Click"/>
+    </Grid>
+</Page>
