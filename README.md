@@ -1,4 +1,34 @@
-# Скрипт 
+# Практическая работа №6 (часть 3) 
+# СОЗДАНИЕ АВТОМАТИЗИРОВАННЫХ UNIT-ТЕСТОВ
+
+## Выполнили
+- Васильев Кирилл
+- Погуляев Андрей
+Группа 3ИСИП-123
+
+## Таблица Users
+<img width="821" height="320" alt="image" src="https://github.com/user-attachments/assets/f729cf82-2731-4fa5-a9ba-aa9ca61c43d9" />
+
+## Результаты тестов
+<img width="583" height="134" alt="image" src="https://github.com/user-attachments/assets/7e61c590-b9b8-4ac6-ad4d-2de715cd8fce" />
+Все тесты пройдены успешно.
+
+### Авторизация (`Cinema.AuthorizationTests`)
+- `AuthTestSuccess` – вход всех пользователей из БД  
+- `AuthTestFail` – негативные сценарии (пустые поля, неверный пароль, несуществующий логин) 
+
+### Регистрация (`Cinema.RegistrationTest`)
+- `RegisterTestSuccess` – создание нового пользователя   
+- `RegisterTestFail` – пустые поля, дублирование email  
+
+## Вывод
+Тесты успешно выполнены, так как:
+- Методы `Auth` и `Register` корректно обрабатывают валидные/невалидные данные.
+- Обработаны все негативные сценарии (пустые поля, дублирование email, неверный пароль).
+- Подключение к БД настроено через `App.config`, тесты используют те же данные, что и приложение.
+
+
+## Скрипт 
 ```sql
 USE [cinema]
 GO
@@ -745,5 +775,4 @@ REFERENCES [dbo].[Users] ([Id])
 GO
 
 ```
-<img width="821" height="320" alt="image" src="https://github.com/user-attachments/assets/f729cf82-2731-4fa5-a9ba-aa9ca61c43d9" />
-<img width="583" height="134" alt="image" src="https://github.com/user-attachments/assets/7e61c590-b9b8-4ac6-ad4d-2de715cd8fce" />
+
