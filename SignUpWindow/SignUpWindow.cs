@@ -12,7 +12,7 @@ namespace SignUpWindow
         private DatabaseService dbService = new DatabaseService();
 
         [TestMethod]
-        public void RegisterSuccessTest()
+        public void RegisterSuccessTest() 
         {
             string uniqueEmail = $"friend_{Guid.NewGuid()}@friend.com";
             var signUpWindow = new RegisterWindow();
